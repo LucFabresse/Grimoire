@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <style>
+            body{
+                background-color: black;
+            }
+        </style>
+
+        <script>
+let body = document.body;
+document.addEventListener('mouseup', click);
+let currentColor = 0;
+let colors = ["black", "red", "green", "blue", "yellow", "pink", "violet", "purple", "orange", "white"];
+
+function click(e) {
+    currentColor = (currentColor + 1) % colors.length;
+    console.log("clicked "+currentColor);
+    document.body.style.backgroundColor = colors[currentColor];
+}
+        </script>
+    </head>
+    <body>
+
+    </body>
+</html>
